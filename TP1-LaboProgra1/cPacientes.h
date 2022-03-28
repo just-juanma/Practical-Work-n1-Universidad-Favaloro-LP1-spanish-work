@@ -1,31 +1,26 @@
-#pragma once
-#include <string>
-#include <iostream>
-using namespace std;
-enum resultados {sinresultado, negativo, positivo};
+#include "glb.h"
 class cPacientes
 {
-public:
-	cPacientes(int telefono,bool fiebre,bool tos,bool mocos,bool contacto_estrecho,bool dolor_de_cabeza,bool dolor_de_garganta,int resultado_Testeo);//resultaod de testeo 0 significa que todavia no hay testeo
-	~cPacientes();
-	int gettelefono(); 
-	bool getfiebre(); 
-	bool gettos();
-	bool getmocos();
-	bool getcontacto_estrecho();
-	bool getdolor_de_cabeza();
-	bool getdolor_de_gargnta();
-	int getResultado_Testeo();
-private:
 	string nombre;
 	string apellido;
 	string dni;
-	int telefono;
+	string telefono;
 	bool fiebre;
 	bool tos;
 	bool mocos;
 	bool contacto_estrecho;
 	bool dolor_de_cabeza;
 	bool dolor_de_garganta;
-	int resultado_Testeo;
+	resultados resultado_testeo;
+public:
+	cPacientes(string _telefono, bool _fiebre, bool _tos, bool _mocos, bool _contacto_estrecho, bool _dolor_de_cabeza, bool _dolor_de_garganta, int _resultado_Testeo); //resultado de testeo 0 significa que todavia no hay testeo
+	~cPacientes();
+	/*int getTelefono(); 
+	bool getFiebre(); 
+	bool getTos();
+	bool getMocos();
+	bool getContacto_estrecho();
+	bool getDolor_de_cabeza();
+	bool getDolor_de_gargnta();
+	int getResultado_Testeo(); plantear a adri*/
 };

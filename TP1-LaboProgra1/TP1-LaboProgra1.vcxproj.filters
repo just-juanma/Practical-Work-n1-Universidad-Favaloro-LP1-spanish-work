@@ -18,9 +18,18 @@
     <ClInclude Include="cPacientes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="glb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cLaboratorios.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="cPacientes.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cLaboratorios.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -139,9 +139,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="cLaboratorios.h" />
     <ClInclude Include="cPacientes.h" />
+    <ClInclude Include="glb.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="cLaboratorios.cpp" />
     <ClCompile Include="cPacientes.cpp" />
   </ItemGroup>
   <ItemGroup>
