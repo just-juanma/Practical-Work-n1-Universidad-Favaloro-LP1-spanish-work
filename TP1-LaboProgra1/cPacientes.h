@@ -1,3 +1,4 @@
+#pragma once
 #include "glb.h"
 class cPacientes
 {
@@ -8,12 +9,13 @@ class cPacientes
 	int fiebre;
 	int tos;
 	int mocos;
-	bool contacto_estrecho;
-	int dolor_de_cabeza;
-	int dolor_de_garganta;
-	resultados resultado_testeo;
+	int contactoEstrecho;
+	int dolorDeCabeza;
+	int dolorDeGarganta;
+	resultados resultadoTesteo;
 public:
-	cPacientes(string _nombre, string _apellido, string _dni, string _telefono, bool _fiebre, bool _tos, bool _mocos, bool _contacto_estrecho, bool _dolor_de_cabeza, bool _dolor_de_garganta, resultados _resultado_testeo); //resultado de testeo 0 significa que todavia no hay testeo
+	cPacientes(string _nombre = "", string _apellido = "", string _dni = "", string _telefono = "", int _fiebre = 0, int _tos = 0, 
+	int _mocos = 0, int _contactoEstrecho = 0, int _dolorDeCabeza = 0, int _dolorDeGarganta = 0);
 	~cPacientes();
 	int getSumaDolores();
 };

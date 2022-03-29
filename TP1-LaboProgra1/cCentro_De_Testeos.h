@@ -1,20 +1,21 @@
+#pragma once
 #include "glb.h"
-#include "cPacientes.h"
+#include"cPacientes.h"
 #include "cLaboratorios.h"
-class cCentro_de_testeos
+class cCentroDeTesteos
 {
-	string ID_Centro;
+	int completo;
+	string IDCentro;
 	string comuna;
 	string nombre;
-	bool completo;
 	cPacientes* paciente;
 	cLaboratorios* laboratorio;
 public:
-	cCentro_de_testeos(string _ID_Centro, string _comuna, string _nombre, bool _completo, cPacientes* _paciente, cLaboratorios* _laboratorio); // agregar los atributos comentados
-	~cCentro_de_testeos();
-	void asociar_laboratorio(cLaboratorios* laboratorio);
-	bool alta_paciente();
-	bool mandar_testeo(cPacientes _paciente);
-	void baja_paciente();
+	cCentroDeTesteos(string _IDCentro, string _comuna, string _nombre, cPacientes* _paciente = NULL, cLaboratorios* _laboratorio = NULL, int _completo = 0);
+	~cCentroDeTesteos();
+	void asociarLaboratorio(cLaboratorios* _laboratorio);
+	bool altaPaciente(cPacientes* _paciente);
+	bool mandarTesteo();
+	void bajaPaciente();
 };
 

@@ -1,17 +1,19 @@
+#pragma once
 #include "glb.h"
 #include "cPacientes.h"
 class cLaboratorios
 {
-	string ID_Laboratorio;
+	string IDLaboratorio;
 	string nombre;
 	string comuna;
 	cPacientes* paciente;
-	bool completo;
+	int completo;
 public:
-	cLaboratorios(string _ID_Laboratorio, string _nombre, string _comuna, cPacientes* _paciente, bool _completo);
+	cLaboratorios(string _IDLaboratorio, string _comuna, string _nombre, int _completo = 0);
 	~cLaboratorios();
-	bool recibir_muestra();
-	resultados analisis_de_muestra(int nSintomas);
-	void avisar_pacientes(resultados muestra);
+	bool recibirMuestra(cPacientes* _paciente);
+	resultados analisisDeMuestra(int nSintomas);
+	void avisarPacientes(resultados muestra);
+	string getNombre() { return nombre; }
 };
 
