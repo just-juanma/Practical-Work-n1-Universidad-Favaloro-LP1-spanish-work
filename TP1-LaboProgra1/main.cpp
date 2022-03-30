@@ -2,7 +2,10 @@
 #include "cCentro_De_Testeos.h"
 #include "cLaboratorios.h"
 #include"cPacientes.h"
+
 void inputCleaning() { cin.ignore(numeric_limits<streamsize>::max(), '\n'); }
+void  validarSintomas(int& var) { while (var != 0 && var != 1) { cout << "Ingrese 1(SI)/0(NO) segun posea o no el sintoma indicado" << endl; } }
+
 int main() {
 	// definicion de variables auxiliares 
 	int i = 0, j = 0, numPaciente = 0, consultarExit = 0, fiebre = 0, tos = 0, mocos = 0, dolorDeCabeza = 0, dolorDeGarganta = 0, contactoEstrecho = 0;
@@ -41,18 +44,19 @@ int main() {
 		cout << "Ingrese su telefono: " << endl;
 		getline(cin, telefono);
 		system("cls");
+		
 		cout << "Padece fiebre?" << endl;
-		cin >> fiebre;
+		validarSintomas(fiebre);
 		cout << "Padece tos?" << endl;
-		cin >> tos;
+		validarSintomas(tos);
 		cout << "Padece mucosidad?" << endl;
-		cin >> mocos;
+		validarSintomas(mocos);
 		cout << "Padece dolor de cabeza?" << endl;
-		cin >> dolorDeCabeza;
+		validarSintomas(dolorDeCabeza);
 		cout << "Padece dolor de garganta?" << endl;
-		cin >> dolorDeGarganta;
+		validarSintomas(dolorDeGarganta);
 		cout << "Es contacto estrecho?" << endl;
-		cin >> contactoEstrecho;
+		validarSintomas(contactoEstrecho);
 		system("cls"); 
 
 		// registro datos
