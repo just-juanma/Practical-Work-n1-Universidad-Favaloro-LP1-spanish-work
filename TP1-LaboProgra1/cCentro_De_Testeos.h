@@ -4,7 +4,7 @@
 #include "cLaboratorios.h"
 class cCentroDeTesteos
 {
-	int completo;
+	bool completo;
 	string IDCentro;
 	string comuna;
 	string nombre;
@@ -17,5 +17,7 @@ public:
 	bool altaPaciente(cPacientes* _paciente);
 	bool mandarTesteo();
 	void bajaPaciente();
+	void imprimir(string texto);
 };
+
 

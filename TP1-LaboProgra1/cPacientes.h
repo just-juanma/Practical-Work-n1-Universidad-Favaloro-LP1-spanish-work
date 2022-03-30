@@ -12,10 +12,10 @@ class cPacientes
 	int contactoEstrecho;
 	int dolorDeCabeza;
 	int dolorDeGarganta;
-	resultados resultadoTesteo;
 public:
 	cPacientes(string _nombre = "", string _apellido = "", string _dni = "", string _telefono = "", int _fiebre = 0, int _tos = 0, 
 	int _mocos = 0, int _contactoEstrecho = 0, int _dolorDeCabeza = 0, int _dolorDeGarganta = 0);
 	~cPacientes();
 	int getSumaDolores();
+	resultados resultadoTesteo;
 };
