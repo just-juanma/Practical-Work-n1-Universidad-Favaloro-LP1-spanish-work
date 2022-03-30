@@ -7,13 +7,14 @@ cLaboratorios::cLaboratorios(string _IDLaboratorio, string _comuna, string _nomb
 	this->comuna = _comuna;
 }
 cLaboratorios::~cLaboratorios() {}
-bool cLaboratorios::recibirMuestra(cPacientes* _paciente) {
+bool cLaboratorios::recibirMuestra(cPacientes* _paciente1, cPacientes* _paciente2) {
 	if (completo < 2) {
 		completo++;
-		this->paciente = _paciente;
+		if (paciente1 != NULL) this->paciente2 = _paciente2;
+		else this->paciente1 = _paciente1;
 		return true;
 	}
-	cout << "El paciente" << nombre << " no puede ser asignado a ningun laboratorio\nRazon: estan los laboratorios llenos" << endl;
+	cout << "El paciente no puede ser asignado al laboratorio "<< nombre << "\nRazon: estan los laboratorios llenos" << endl;
 	return false;
 }
 resultados cLaboratorios::analisisDeMuestra(int nSintomas) {

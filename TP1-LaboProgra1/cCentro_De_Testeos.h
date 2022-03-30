@@ -8,13 +8,15 @@ class cCentroDeTesteos
 	string IDCentro;
 	string comuna;
 	string nombre;
-	cPacientes* paciente;
+	cPacientes* paciente1;
+	cPacientes* paciente2;
 	cLaboratorios* laboratorio;
 public:
-	cCentroDeTesteos(string _IDCentro, string _comuna, string _nombre, cPacientes* _paciente = NULL, cLaboratorios* _laboratorio = NULL, int _completo = 0);
+	cCentroDeTesteos(string _IDCentro, string _comuna, string _nombre);
 	~cCentroDeTesteos();
 	void asociarLaboratorio(cLaboratorios* _laboratorio);
 	bool altaPaciente(cPacientes* _paciente);
+	string getNombre() { return nombre; }
 	bool mandarTesteo();
 	void bajaPaciente();
 };
