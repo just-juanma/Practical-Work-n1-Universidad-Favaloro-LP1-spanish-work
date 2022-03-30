@@ -2,6 +2,7 @@
 #include "cCentro_De_Testeos.h"
 #include "cLaboratorios.h"
 #include"cPacientes.h"
+void inputCleaning() { cin.ignore(numeric_limits<streamsize>::max(), '\n'); }
 int main() {
 	// definicion de variables auxiliares 
 	int i = 0, j = 0, numPaciente = 0, consultarExit = 0, fiebre = 0, tos = 0, mocos = 0, dolorDeCabeza = 0, dolorDeGarganta = 0, contactoEstrecho = 0;
@@ -29,28 +30,29 @@ int main() {
 	while (exit == false) {
 		i = 0;
 		
+		
 		// primer paso: ingresar el paciente al sistema
 		cout << "Ingrese su nombre: " << endl;
 		getline(cin, nombre); // lectura hasta salto de linea (sin delimitador se asigna '\n' por default)
-		//cout << "Ingrese su apellido: " << endl;
-		//getline(cin, apellido);
-		//cout << "Ingrese su DNI: " << endl;
-		//getline(cin, dni);
-		//cout << "Ingrese su telefono: " << endl;
-		//getline(cin, telefono);
-		//system("cls");
-		//cout << "Padece fiebre?" << endl;
-		//cin >> fiebre;
-		//cout << "Padece tos?" << endl;
-		//cin >> tos;
-		//cout << "Padece mucosidad?" << endl;
-		//cin >> mocos;
-		//cout << "Padece dolor de cabeza?" << endl;
-		//cin >> dolorDeCabeza;
-		//cout << "Padece dolor de garganta?" << endl;
-		//cin >> dolorDeGarganta;
-		//cout << "Es contacto estrecho?" << endl;
-		//cin >> contactoEstrecho;
+		cout << "Ingrese su apellido: " << endl;
+		getline(cin, apellido);
+		cout << "Ingrese su DNI: " << endl;
+		getline(cin, dni);
+		cout << "Ingrese su telefono: " << endl;
+		getline(cin, telefono);
+		system("cls");
+		cout << "Padece fiebre?" << endl;
+		cin >> fiebre;
+		cout << "Padece tos?" << endl;
+		cin >> tos;
+		cout << "Padece mucosidad?" << endl;
+		cin >> mocos;
+		cout << "Padece dolor de cabeza?" << endl;
+		cin >> dolorDeCabeza;
+		cout << "Padece dolor de garganta?" << endl;
+		cin >> dolorDeGarganta;
+		cout << "Es contacto estrecho?" << endl;
+		cin >> contactoEstrecho;
 		system("cls"); 
 
 		// registro datos
@@ -69,15 +71,16 @@ int main() {
 		numPaciente++;
 
 		// si no alcance el tope de pacientes, pregunto por seguir agregando
-		/*if (exit == false) {
+		if (exit == false) {
 			cout << "Desea seguir cargando pacientes al sistema? (1 por si, 0 por no)" << endl;
 			cin >> consultarExit;
-		}*/
-
-		//system("cls");
+			if (consultarExit == 0) exit = true;
+		}
+		inputCleaning();
+		system("cls");
 
 	}
-	for (j = i; j < 2; i++) {
+	for (i = 0; i < numPaciente; i++) {
 		centro[i].mandarTesteo();
 	}
 	i = 0;

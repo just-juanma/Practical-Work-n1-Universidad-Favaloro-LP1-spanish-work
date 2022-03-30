@@ -27,27 +27,11 @@ bool cCentroDeTesteos::mandarTesteo() {
 	return false;
 }
 
-void cCentroDeTesteos::asociarLaboratorio(cLaboratorios* _laboratorio) {
-	this->laboratorio = _laboratorio;
-}
-/*
-bool cCentroDeTesteos::altaPaciente(cPacientes* _paciente1, cPacientes* _paciente2) {
-	string error = "ninguno";//incluir try and catch 
-	if (this->paciente1 == NULL) {
-		this->paciente1 = _paciente1;
-	}
-	else if(this->paciente2 == NULL){
-		this->paciente2 = _paciente2;
-	}//luego del catch se ajusta el error 
-	if (error != "ninguno") {
-		this->imprimir(error);
-	}
-}*/
 void cCentroDeTesteos::bajaPaciente() {
-	if (this->paciente1->resultadoTesteo == sin_resultado) {
+	if (this->paciente1->resultadoTesteo != sin_resultado) {
 		this->paciente1 = NULL; // No tiene sentido, deber
 	}
-	if (this->paciente2->resultadoTesteo == sin_resultado) {
+	if (this->paciente2->resultadoTesteo != sin_resultado) {
 		this->paciente2 = NULL; // No tiene sentido, deber
 	}
 }

@@ -3,3 +3,4 @@
 #include <string>
 using namespace std;
 enum resultados { sin_resultado, negativo, positivo };
+void inputCleaning();
