@@ -18,5 +18,7 @@ public:
 	~cPacientes();
 	int getSumaDolores();
 	resultados resultadoTesteo;
-	string toString()
+	string to_string();
+	string imprimir();
+	string getNombre() { return nombre; }
 };

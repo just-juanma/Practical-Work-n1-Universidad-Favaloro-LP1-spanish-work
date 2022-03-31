@@ -17,6 +17,22 @@ cPacientes::~cPacientes() {}
 int cPacientes::getSumaDolores() {
 	return fiebre + tos + mocos + dolorDeCabeza + dolorDeGarganta;
 }
-string cPacientes::toString() {
-	return "Datos personales - Nombre:" + nombre + "Apellido:" + apellido + "DNI:" + dni + "Telefono:" + telefono + "Sintomas - Fiebre:" + std::to_string(fiebre) + "Mocos:" + std::to_string(mocos) + "Contacto Estrecho:" + std::to_string(contactoEstrecho) + "Dolor de cabeza:" + std::to_string(dolorDeCabeza) + "Dolor de garganta:" + std::to_string(dolorDeGarganta);
+string cPacientes::to_string() {
+	stringstream stc;
+	stc << "Nombre:" << nombre;
+	stc << "Apellido:" << apellido;
+	stc << "DNI:" << dni;
+	stc << "Telefono:" << telefono;
+	stc << "Fiebre:" << std::to_string(fiebre);
+	stc << "Paciente 2:" << std::to_string(tos);
+	stc << "Laboratorio:" << std::to_string(mocos);
+	stc << "Laboratorio:" << std::to_string(contactoEstrecho);
+	stc << "Laboratorio:" << std::to_string(dolorDeCabeza);
+	stc << "Laboratorio:" << std::to_string(dolorDeGarganta);
+	stc << endl;
+	return stc.str();
+}
+string cPacientes::imprimir()
+{
+	cout << to_string();
 }

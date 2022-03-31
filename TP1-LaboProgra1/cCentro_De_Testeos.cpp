@@ -9,6 +9,7 @@ cCentroDeTesteos::cCentroDeTesteos(string _IDCentro, string _comuna, string _nom
 	this->paciente1 = NULL;
 	this->paciente2 = NULL;
 	this->laboratorio = NULL;
+	
 }
 cCentroDeTesteos::~cCentroDeTesteos() {}
 void cCentroDeTesteos::asociarLaboratorio(cLaboratorios* _laboratorio) { this->laboratorio = _laboratorio; }
@@ -36,6 +37,19 @@ void cCentroDeTesteos::bajaPaciente() {
 	}
 }
 
-string cCentroDeTesteos::toString() {
-	return "Datos - ID:" + IDCentro + "Comuna:" + comuna + "Nombre:" + nombre + "Capacidad completa:" + std::to_string(completo) ;
+string cCentroDeTesteos::to_string() {
+	stringstream stc;
+	stc << "ID:" << IDCentro; 
+	stc << "Comuna:" << comuna; 
+	stc << "Nombre:" << nombre; 
+	stc << "Completo:" << std::to_string(completo); 
+	stc << "Paciente 1:" << paciente1->getNombre(); 
+	stc << "Paciente 2:" << paciente2->getNombre(); 
+	stc << "Laboratorio:" << laboratorio->getNombre();
+	stc << endl;
+	return stc.str();
+}
+string cCentroDeTesteos::imprimir()
+{
+	cout << to_string();
 }

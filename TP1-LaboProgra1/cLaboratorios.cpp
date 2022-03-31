@@ -27,7 +27,15 @@ void cLaboratorios::avisarPacientes(resultados muestra) {
 	cout << "Hola, desde" << nombre << " te informamos que el resultado de la muestra fue: NEGATIVO." << endl;
 	completo = false;
 }
-
-string cLaboratorios::toString() {
-	return "Datos - ID" + IDLaboratorio + "Nombre:" + nombre + "Comuna:" + comuna;
+string cLaboratorios::to_string() {
+	stringstream stc;
+	stc << "ID:" << IDLaboratorio; 
+	stc << "Nombre:" << nombre; 
+	stc << "Comuna:" << comuna;
+	stc << endl;
+	return stc.str();
+}
+string cLaboratorios::imprimir()
+{
+	cout << to_string();
 }

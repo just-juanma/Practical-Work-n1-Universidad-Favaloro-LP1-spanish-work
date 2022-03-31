@@ -11,6 +11,7 @@ class cCentroDeTesteos
 	cPacientes* paciente1;
 	cPacientes* paciente2;
 	cLaboratorios* laboratorio;
+	string cadena;
 public:
 	cCentroDeTesteos(string _IDCentro, string _comuna, string _nombre);
 	~cCentroDeTesteos();
@@ -20,7 +21,9 @@ public:
 	bool mandarTesteo();
 	void bajaPaciente();
 	void imprimir(string texto);
-	string toString() {}
+	string to_string();
+	string imprimir();
+
 };
 
 
