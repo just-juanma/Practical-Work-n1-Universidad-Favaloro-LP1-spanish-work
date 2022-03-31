@@ -29,5 +29,5 @@ void cLaboratorios::avisarPacientes(resultados muestra) {
 }
 
 string cLaboratorios::toString() {
-	return "Datos - ID" + IDLaboratorio + "Nombre:" + nombre + "Comuna:" + comuna;;
+	return "Datos - ID" + IDLaboratorio + "Nombre:" + nombre + "Comuna:" + comuna;
 }

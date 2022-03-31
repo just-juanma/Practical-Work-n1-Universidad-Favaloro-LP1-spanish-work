@@ -37,5 +37,5 @@ void cCentroDeTesteos::bajaPaciente() {
 }
 
 string cCentroDeTesteos::toString() {
-	return "Datos - ID:" + IDCentro + "Comuna:" + comuna + "Nombre:" + nombre + "Capacidad completa:" + completo ;
+	return "Datos - ID:" + IDCentro + "Comuna:" + comuna + "Nombre:" + nombre + "Capacidad completa:" + std::to_string(completo) ;
 }

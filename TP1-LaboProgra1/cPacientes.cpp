@@ -18,5 +18,5 @@ int cPacientes::getSumaDolores() {
 	return fiebre + tos + mocos + dolorDeCabeza + dolorDeGarganta;
 }
 string cPacientes::toString() {
-	return "Datos personales - Nombre:" + nombre + "Apellido:" + apellido + "DNI:" + dni + "Telefono:" + telefono + "Sintomas - Fiebre:" + fiebre + "Mocos:" + mocos + "Contacto Estrecho:" + contactoEstrecho + "Dolor de cabeza:" + dolorDeCabeza + "Dolor de garganta:" + dolorDeGarganta;
+	return "Datos personales - Nombre:" + nombre + "Apellido:" + apellido + "DNI:" + dni + "Telefono:" + telefono + "Sintomas - Fiebre:" + std::to_string(fiebre) + "Mocos:" + std::to_string(mocos) + "Contacto Estrecho:" + std::to_string(contactoEstrecho) + "Dolor de cabeza:" + std::to_string(dolorDeCabeza) + "Dolor de garganta:" + std::to_string(dolorDeGarganta);
 }
