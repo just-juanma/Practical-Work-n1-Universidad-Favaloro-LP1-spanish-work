@@ -35,3 +35,7 @@ void cCentroDeTesteos::bajaPaciente() {
 		this->paciente2 = NULL; // No tiene sentido, deber
 	}
 }
+
+string cCentroDeTesteos::toString() {
+	return "Datos - ID:" + IDCentro + "Comuna:" + comuna + "Nombre:" + nombre + "Capacidad completa:" + completo ;
+}

@@ -20,6 +20,7 @@ public:
 	bool mandarTesteo();
 	void bajaPaciente();
 	void imprimir(string texto);
+	string toString() {}
 };
 
 

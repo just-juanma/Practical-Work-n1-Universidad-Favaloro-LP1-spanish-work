@@ -18,4 +18,5 @@ public:
 	~cPacientes();
 	int getSumaDolores();
 	resultados resultadoTesteo;
+	string toString()
 };
