@@ -16,6 +16,7 @@ public:
 	resultados* analisisDeMuestra();
 	void avisarPacientes(resultados* muestra);
 	string getNombre() { return nombre; }
-	
+	string to_string();
+	string imprimir();
 };
 

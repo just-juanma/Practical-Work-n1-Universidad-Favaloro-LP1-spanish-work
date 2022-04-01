@@ -17,3 +17,22 @@ cPacientes::~cPacientes() {}
 int cPacientes::getSumaSintomas() {
 	return fiebre + tos + mocos + dolorDeCabeza + dolorDeGarganta;
 }
+string cPacientes::to_string() {
+	stringstream stc;
+	stc << "Nombre:" << nombre;
+	stc << "Apellido:" << apellido;
+	stc << "DNI:" << dni;
+	stc << "Telefono:" << telefono;
+	stc << "Fiebre:" << std::to_string(fiebre);
+	stc << "Paciente 2:" << std::to_string(tos);
+	stc << "Laboratorio:" << std::to_string(mocos);
+	stc << "Laboratorio:" << std::to_string(contactoEstrecho);
+	stc << "Laboratorio:" << std::to_string(dolorDeCabeza);
+	stc << "Laboratorio:" << std::to_string(dolorDeGarganta);
+	stc << endl;
+	return stc.str();
+}
+string cPacientes::imprimir()
+{
+	cout << to_string();
+}

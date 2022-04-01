@@ -5,6 +5,7 @@
 #pragma once
 #include <iostream>
 #include <string>
+#include <sstream>
 using namespace std;
 enum resultados { sinResultado, negativo, positivo };
 
