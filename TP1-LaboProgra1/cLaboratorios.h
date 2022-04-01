@@ -10,11 +10,12 @@ class cLaboratorios
 	cPacientes* paciente2;
 	int completo;
 public:
-	cLaboratorios(string _IDLaboratorio, string _comuna, string _nombre, int _completo = 0);
+	cLaboratorios(string _IDLaboratorio, string _comuna, string _nombre);
 	~cLaboratorios();
-	bool recibirMuestra(cPacientes* _paciente1, cPacientes* _paciente2);
-	resultados analisisDeMuestra(int nSintomas);
-	void avisarPacientes(resultados muestra);
+	bool recibirMuestra(cPacientes* _paciente);
+	resultados* analisisDeMuestra();
+	void avisarPacientes(resultados* muestra);
 	string getNombre() { return nombre; }
+	
 };
 

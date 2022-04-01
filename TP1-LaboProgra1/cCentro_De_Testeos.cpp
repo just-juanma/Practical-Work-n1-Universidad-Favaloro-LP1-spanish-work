@@ -22,16 +22,14 @@ bool cCentroDeTesteos::altaPaciente(cPacientes* _paciente) {
 	cout << "El paciente no puede ser asignado al centro de testeos " << nombre << "\nRazon: esta el centro lleno" << endl;
 	return false;
 }
-bool cCentroDeTesteos::mandarTesteo() {
-	if(true == laboratorio->recibirMuestra(paciente1, paciente2)) return true;
+bool cCentroDeTesteos::mandarTesteo(cPacientes* _paciente) {
+	if(true == laboratorio->recibirMuestra(_paciente)) return true;
 	return false;
 }
 
-void cCentroDeTesteos::bajaPaciente() {
-	if (this->paciente1->resultadoTesteo != sin_resultado) {
-		this->paciente1 = NULL; // No tiene sentido, deber
-	}
-	if (this->paciente2->resultadoTesteo != sin_resultado) {
-		this->paciente2 = NULL; // No tiene sentido, deber
-	}
+void cCentroDeTesteos::bajaPaciente(resultados* resultadoTesteo) {
+	if (*resultadoTesteo != sinResultado) {
+		this->paciente1 = NULL; 
+		this->paciente2 = NULL; 
+	}	
 }

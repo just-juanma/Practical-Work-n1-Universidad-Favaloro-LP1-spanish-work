@@ -14,6 +14,6 @@ int _dolorDeCabeza, int _dolorDeGarganta) {
 	this->dolorDeGarganta = _dolorDeGarganta;
 }
 cPacientes::~cPacientes() {}
-int cPacientes::getSumaDolores() {
+int cPacientes::getSumaSintomas() {
 	return fiebre + tos + mocos + dolorDeCabeza + dolorDeGarganta;
 }
