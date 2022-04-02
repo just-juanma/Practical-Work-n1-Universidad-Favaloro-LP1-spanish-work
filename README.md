@@ -15,6 +15,6 @@ Sin embargo, proponer que la existencia del paciente depende del centro no tiene
 
 cLaboratorios (agregacion) cCentroDeTesteos:
 
-Se plantea al laboratorio como UNICAMENTE util para el centro asignado. Cada laboratorio tiene asignado un centro. Sin centro, no hay laboratorio. Hemos elegido COMPOSICION
+Se plantea al laboratorio como UNICAMENTE util para el centro asignado. Cada laboratorio tiene asignado un centro. Sin centro, el laboratorio carece de sentido, porque pierde su utilidad. Hemos elegido COMPOSICION
 
 Los laboratorios se van asociando de a uno (1) hacia un centro de testeos (1). Siempre se asignara 1 laboratorio a 1 centro, porque asi fue codeado el programa
