@@ -42,6 +42,7 @@ int main() {
 
 
 	if (nPacientes == 3) i++;
+
 	// primer paso: darle alta al paciente en algun centro de testeos (en caso de presentar lugar)
 	if (nPacientes != 4) {
 		for (j = 0; j < i + 1; j++)
@@ -57,6 +58,7 @@ int main() {
 				idx++;
 			}
 	}
+
 	// segundo paso: determinar el resultado del hisopado
 	for (i = 0; i < 2; i++) 
 		centro[i].mandarTesteo();

@@ -3,12 +3,6 @@
 #include "cPacientes.h"
 class cLaboratorios
 {
-	string IDLaboratorio;
-	string nombre;
-	string comuna;
-	cPacientes* paciente1;
-	cPacientes* paciente2;
-	int completo;
 public:
 	cLaboratorios(string _IDLaboratorio, string _comuna, string _nombre);
 	~cLaboratorios();
@@ -18,5 +12,12 @@ public:
 	string getNombre() { return nombre; }
 	string to_string();
 	void imprimir() { cout << to_string(); }
+private:
+	int completo;
+	string IDLaboratorio;
+	string nombre;
+	string comuna;
+	cPacientes* paciente1;
+	cPacientes* paciente2;
 };
 

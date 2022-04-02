@@ -8,7 +8,6 @@ cCentroDeTesteos::cCentroDeTesteos(string _IDCentro, string _comuna, string _nom
 	this->paciente1 = NULL;
 	this->paciente2 = NULL;
 	this->laboratorio = NULL;
-	
 }
 cCentroDeTesteos::~cCentroDeTesteos() {}
 void cCentroDeTesteos::altaPaciente(cPacientes* _paciente) {
@@ -21,16 +20,12 @@ void cCentroDeTesteos::altaPaciente(cPacientes* _paciente) {
 	cout << "El paciente " << _paciente->getNombre() << " no puede ser asignado al centro de testeos " << nombre << "\nRazon: esta el centro lleno" << endl;
 }
 void cCentroDeTesteos::mandarTesteo() {
-	if(paciente1 != NULL)
-	laboratorio->recibirMuestra(paciente1);
-	if(paciente2 != NULL)
-	laboratorio->recibirMuestra(paciente2);
+	if(paciente1 != NULL) laboratorio->recibirMuestra(paciente1);
+	if(paciente2 != NULL) laboratorio->recibirMuestra(paciente2);
 }
 void cCentroDeTesteos::bajaPaciente(resultados* resultadoTesteo) {
-	if (*resultadoTesteo != sinResultado && paciente1 != NULL) 
-		this->paciente1 = NULL;
-	else if (*resultadoTesteo != sinResultado && paciente2 != NULL) 
-		this->paciente2 = NULL;
+	if (*resultadoTesteo != sinResultado && paciente1 != NULL)  this->paciente1 = NULL;
+	else if (*resultadoTesteo != sinResultado && paciente2 != NULL) this->paciente2 = NULL;
 }
 string cCentroDeTesteos::to_string() {
 	stringstream stc;

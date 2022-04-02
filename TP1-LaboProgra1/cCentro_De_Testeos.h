@@ -4,14 +4,6 @@
 #include "cLaboratorios.h"
 class cCentroDeTesteos
 {
-	int completo;
-	string IDCentro;
-	string comuna;
-	string nombre;
-	string cadena;
-	cLaboratorios* laboratorio;
-	cPacientes* paciente1;
-	cPacientes* paciente2;
 public:
 	cCentroDeTesteos(string _IDCentro, string _comuna, string _nombre);
 	~cCentroDeTesteos();
@@ -22,6 +14,14 @@ public:
 	string to_string();
 	void imprimir() { cout << to_string(); }
 	void bajaPaciente(resultados* resultadoTesteo);
+private:
+	int completo;
+	string IDCentro;
+	string comuna;
+	string nombre;
+	cLaboratorios* laboratorio;
+	cPacientes* paciente1;
+	cPacientes* paciente2;
 };
 
 
