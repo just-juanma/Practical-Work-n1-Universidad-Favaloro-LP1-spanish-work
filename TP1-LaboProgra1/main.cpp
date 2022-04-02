@@ -6,7 +6,7 @@
 int main() {
 
 	// definicion de variables auxiliares 
-	int i = 0, j = 0, k = 0, idx = 1;
+	int i = 0, j = 0, k = 0, l = 0, idx = 1;
 	resultados resul = sinResultado;
 
 	/*
@@ -40,23 +40,20 @@ int main() {
 	/*nPacientes = 1;
 	cPacientes* paciente = new cPacientes[3]{ {"Bautista", "Gonzalez", "33489599", "1549382745", 1, 1, 1, 1, 1, 1} };*/
 
-
-	if (nPacientes == 3) i++;
-
 	// primer paso: darle alta al paciente en algun centro de testeos (en caso de presentar lugar)
-	if (nPacientes != 4) {
-		for (j = 0; j < i + 1; j++)
-			for (k = 0; k < nPacientes - idx + 2; k++) {
-				centro[j].altaPaciente(&paciente[idx - 1]);
-				idx++;
-			}
+	k = nPacientes;
+	l = nCentros;
+	if (k == 1 || k == 2) {
+		l--;
+		k++;
 	}
-	else {
-		for (j = 0; j < 2; j++)
-			for (k = 0; k < 2; k++) {
-				centro[j].altaPaciente(&paciente[idx - 1]);
-				idx++;
-			}
+	for (i = 0; i < l; i++) {
+		for (j = 0; j < k; j++) {
+			centro[i].altaPaciente(&paciente[idx - 1]);
+			idx++;
+			k--;
+		}
+		k++;
 	}
 
 	// segundo paso: determinar el resultado del hisopado
@@ -85,6 +82,10 @@ int main() {
 			resul = paciente[j].getResul();
 			centro[i].bajaPaciente(&resul);
 		}
+
+	// adicional: dar de baja a los laboratorios
+	for (i = 0; i < nCentros; i++)
+		centro[i].desasociarLaboratorio(&laboratorio[i]);
 
 	// elimino los objetos generados
 	delete[] centro;

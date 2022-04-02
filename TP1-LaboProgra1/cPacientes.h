@@ -13,16 +13,16 @@ public:
 	string to_string();
 	void imprimir() { cout << to_string(); }
 private:
+	string nombre;
+	string apellido;
+	string dni;
+	string telefono;
 	int fiebre;
 	int tos;
 	int mocos;
 	int contactoEstrecho;
 	int dolorDeCabeza;
 	int dolorDeGarganta;
-	string nombre;
-	string apellido;
-	string dni;
-	string telefono;
 	 /*
 		se decidio agregar este atributo para poder setear el resultado de cada paciente, y de esa forma despues poder
 		darle de baja segun el mismo

@@ -8,9 +8,11 @@ public:
 	cCentroDeTesteos(string _IDCentro, string _comuna, string _nombre);
 	~cCentroDeTesteos();
 	void asociarLaboratorio(cLaboratorios* _laboratorio) { this->laboratorio = _laboratorio; }
+	void desasociarLaboratorio(cLaboratorios* _laboratorio) { this->laboratorio = NULL; }
 	void altaPaciente(cPacientes* _paciente);
 	void mandarTesteo();
 	string getNombre() { return nombre; }
+	int getCompleto() { return completo; }
 	string to_string();
 	void imprimir() { cout << to_string(); }
 	void bajaPaciente(resultados* resultadoTesteo);

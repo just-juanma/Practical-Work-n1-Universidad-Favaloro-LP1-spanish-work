@@ -5,11 +5,16 @@ cCentroDeTesteos::cCentroDeTesteos(string _IDCentro, string _comuna, string _nom
 	this->comuna = _comuna;
 	this->nombre = _nombre;
 	this->completo = 0;
+	paciente1 = new cPacientes;
 	this->paciente1 = NULL;
+	paciente2 = new cPacientes;
 	this->paciente2 = NULL;
 	this->laboratorio = NULL;
 }
-cCentroDeTesteos::~cCentroDeTesteos() {}
+cCentroDeTesteos::~cCentroDeTesteos() {
+	delete paciente1;
+	delete paciente2;
+}
 void cCentroDeTesteos::altaPaciente(cPacientes* _paciente) {
 	if (completo < 2) {
 		completo++;
