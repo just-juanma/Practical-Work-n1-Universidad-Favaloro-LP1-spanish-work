@@ -9,12 +9,10 @@ cPacientes (agregacion) cCentroDeTesteos:
 
 En un principio pensamos en establecer asociacion, ya que el paciente puede optar por ir al centro, o no. Sin embargo planteamos dos consideraciones:
 1. Cada centro MINIMAMENTE tendra 1 paciente, siguiendo la logica de nuestro programa. Por lo tanto, no hay posibilidad de que no haya pacientes en el centro
-2. Un paciente que no va al centro NO se consideraria paciente, por lo que se pierde la logica de la clase
-
-Sin embargo, proponer que la existencia del paciente depende del centro no tiene sentido. Por eso se opta por AGREGACION
+2. Un paciente que no va al centro NO se consideraria paciente, por lo que se pierde la logica de la clase. Por eso se opta por COMPOSICION
 
 cLaboratorios (agregacion) cCentroDeTesteos:
 
-Se plantea al laboratorio como UNICAMENTE util para el centro asignado. Cada laboratorio tiene asignado un centro. Sin centro, el laboratorio carece de sentido, porque pierde su utilidad. Hemos elegido COMPOSICION
+Se plantea al laboratorio como de utilidad para cualquier centro que se le asigne, y funcionara dependendiente a el. Por eso se opta por COMPOSICION
 
 Los laboratorios se van asociando de a uno (1) hacia un centro de testeos (1). Siempre se asignara 1 laboratorio a 1 centro, porque asi fue codeado el programa
