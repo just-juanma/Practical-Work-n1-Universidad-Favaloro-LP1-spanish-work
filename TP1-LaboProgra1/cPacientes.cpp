@@ -1,7 +1,7 @@
 #include "glb.h"
 #include "cPacientes.h"
 cPacientes::cPacientes(string _nombre, string _apellido, string _dni, string _telefono, int _fiebre, int _tos, int _mocos, int _contactoEstrecho,
-int _dolorDeCabeza, int _dolorDeGarganta) {
+int _dolorDeCabeza, int _dolorDeGarganta, resultados _resultado) {
 	this->nombre = _nombre;
 	this->apellido = _apellido;
 	this->dni = _dni;
@@ -14,25 +14,19 @@ int _dolorDeCabeza, int _dolorDeGarganta) {
 	this->dolorDeGarganta = _dolorDeGarganta;
 }
 cPacientes::~cPacientes() {}
-int cPacientes::getSumaSintomas() {
-	return fiebre + tos + mocos + dolorDeCabeza + dolorDeGarganta;
-}
 string cPacientes::to_string() {
 	stringstream stc;
-	stc << "Nombre:" << nombre;
-	stc << "Apellido:" << apellido;
-	stc << "DNI:" << dni;
-	stc << "Telefono:" << telefono;
-	stc << "Fiebre:" << std::to_string(fiebre);
-	stc << "Paciente 2:" << std::to_string(tos);
-	stc << "Laboratorio:" << std::to_string(mocos);
-	stc << "Laboratorio:" << std::to_string(contactoEstrecho);
-	stc << "Laboratorio:" << std::to_string(dolorDeCabeza);
-	stc << "Laboratorio:" << std::to_string(dolorDeGarganta);
+	stc << "Nombre: " << nombre;
+	stc << "\nApellido: " << apellido;
+	stc << "\nDNI: " << dni;
+	stc << "\nTelefono: " << telefono;
+	stc << "\nFiebre: " << std::to_string(fiebre);
+	stc << "\nTos: " << std::to_string(tos);
+	stc << "\nMocos: " << std::to_string(mocos);
+	stc << "\nContacto estrecho: " << std::to_string(contactoEstrecho);
+	stc << "\nDolor de cabeza: " << std::to_string(dolorDeCabeza);
+	stc << "\nDolor de garganta: " << std::to_string(dolorDeGarganta);
+	stc << "\nResultado (0 = sinResultado, 1 = negativo, 2 = positivo): " << std::to_string(resultado);
 	stc << endl;
 	return stc.str();
-}
-string cPacientes::imprimir()
-{
-	cout << to_string();
 }

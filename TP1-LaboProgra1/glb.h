@@ -8,6 +8,3 @@
 #include <sstream>
 using namespace std;
 enum resultados { sinResultado, negativo, positivo };
-
-// pequeña funcion, para obtener el motivo de su declaracion en el programa, ir al main.cpp
-void inputCleaning();

@@ -8,22 +8,20 @@ class cCentroDeTesteos
 	string IDCentro;
 	string comuna;
 	string nombre;
+	string cadena;
+	cLaboratorios* laboratorio;
 	cPacientes* paciente1;
 	cPacientes* paciente2;
-	cLaboratorios* laboratorio;
-	string cadena;
 public:
 	cCentroDeTesteos(string _IDCentro, string _comuna, string _nombre);
 	~cCentroDeTesteos();
-	void asociarLaboratorio(cLaboratorios* _laboratorio);
-	bool altaPaciente(cPacientes* _paciente);
+	void asociarLaboratorio(cLaboratorios* _laboratorio) { this->laboratorio = _laboratorio; }
+	void altaPaciente(cPacientes* _paciente);
+	void mandarTesteo();
 	string getNombre() { return nombre; }
-	bool mandarTesteo(cPacientes* _paciente);
-	void bajaPaciente(resultados* resultadoTesteo);
-	void imprimir(string texto);
 	string to_string();
-	string imprimir();
-
+	void imprimir() { cout << to_string(); }
+	void bajaPaciente(resultados* resultadoTesteo);
 };
 
 

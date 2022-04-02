@@ -12,11 +12,11 @@ class cLaboratorios
 public:
 	cLaboratorios(string _IDLaboratorio, string _comuna, string _nombre);
 	~cLaboratorios();
-	bool recibirMuestra(cPacientes* _paciente);
-	resultados* analisisDeMuestra();
-	void avisarPacientes(resultados* muestra);
+	void recibirMuestra(cPacientes* _paciente);
+	void analisisDeMuestra(cPacientes* _paciente);
+	void avisarPacientes(resultados muestra, cPacientes* _paciente);
 	string getNombre() { return nombre; }
 	string to_string();
-	string imprimir();
+	void imprimir() { cout << to_string(); }
 };
 
