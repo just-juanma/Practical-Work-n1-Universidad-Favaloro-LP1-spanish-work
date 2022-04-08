@@ -1,7 +1,4 @@
-# TPS-LaboProgra1
-Repositorio para los trabajos practicos de Laboratorio de Programacion I
-
-TP 1:
+# TP1-LaboProgra1
 
 Explicacion de las relaciones del UML: 
 
