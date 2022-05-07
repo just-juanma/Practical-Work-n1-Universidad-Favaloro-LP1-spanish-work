@@ -13,3 +13,5 @@ cLaboratorios (agregacion) cCentroDeTesteos:
 Se plantea al laboratorio como de utilidad para cualquier centro que se le asigne, y funcionara dependendiente a el. Por eso se opta por AGREGACION
 
 Los laboratorios se van asociando de a uno (1) hacia un centro de testeos (1). Siempre se asignara 1 laboratorio a 1 centro, porque asi fue codeado el programa
+
+Este trabajo fue valuado finalmente con 6.25/10
